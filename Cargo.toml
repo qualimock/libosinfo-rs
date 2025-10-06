@@ -17,8 +17,8 @@ exclude = ["gir", "gir-files"]
 libc = "0.2"
 bitflags = "2.2"
 ffi = { package = "libosinfo-sys", path = "./sys", version = "0.1.0" }
-glib = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main", version = "0.22" }
-gio = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main", version = "0.22" }
+glib = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main", version = ">=0.21" }
+gio = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main", version = ">=0.21" }
 
 [package.metadata.docs.rs]
 all-features = true
