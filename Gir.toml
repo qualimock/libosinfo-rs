@@ -1,0 +1,78 @@
+[options]
+library = "Libosinfo"
+version = "1.0"
+min_cfg_version = "1.0"
+target_path = "."
+girs_directories = ["gir-files"]
+work_mode = "normal"
+single_version_file = true
+generate_safety_asserts = true
+deprecate_by_min_version = true
+generate_builder = true
+
+generate = [
+	"Libosinfo.AvatarFormat",
+	"Libosinfo.Entity",
+	"Libosinfo.Datamap",
+	"Libosinfo.DatamapList",
+	"Libosinfo.Filter",
+	"Libosinfo.List",
+	"Libosinfo.Os",
+	"Libosinfo.OsList",
+	"Libosinfo.OsVariant",
+	"Libosinfo.OsVariantList",
+	"Libosinfo.Deployment",
+	"Libosinfo.DeploymentList",
+	"Libosinfo.Device",
+	"Libosinfo.DeviceList",
+	"Libosinfo.DeviceLink",
+	"Libosinfo.DeviceLinkFilter",
+	"Libosinfo.DeviceDriver",
+	"Libosinfo.DeviceDriverList",
+	"Libosinfo.DeviceLinkList",
+	"Libosinfo.DeviceDriverSigningReq",
+	"Libosinfo.InstallScript",
+	"Libosinfo.InstallScriptList",
+	"Libosinfo.InstallScriptInjectionMethod",
+	"Libosinfo.InstallScriptInstallationSource",
+	"Libosinfo.InstallConfig",
+	"Libosinfo.InstallConfigParam",
+	"Libosinfo.InstallConfigParamPolicy",
+	"Libosinfo.InstallConfigParamList",
+	"Libosinfo.Platform",
+	"Libosinfo.PlatformList",
+	"Libosinfo.Tree",
+	"Libosinfo.TreeList",
+	"Libosinfo.Media",
+	"Libosinfo.MediaList",
+	"Libosinfo.ProductRelationship",
+	"Libosinfo.Db",
+	"Libosinfo.PathFormat",
+	"Libosinfo.Firmware",
+	"Libosinfo.FirmwareList",
+	"Libosinfo.Image",
+	"Libosinfo.ImageList",
+	"Libosinfo.Resources",
+	"Libosinfo.ResourcesList",
+	"Libosinfo.ReleaseStatus",
+	"Libosinfo.Error",
+	"Libosinfo.Loader",
+	"Libosinfo.MediaDetectFlags",
+	"Libosinfo.MediaError",
+	"Libosinfo.Product",
+	"Libosinfo.ProductList",
+	"Libosinfo.ProductFilter",
+	"Libosinfo.TreeError",
+]
+
+manual = [
+	"GLib.Error",
+	"GLib.Priority",
+	"GLib.Quark",
+	"GLib.Date",
+	"Gio.Cancellable",
+	"Gio.File",
+	"Gio.AsyncResult",
+	"Gio.AsyncReadyCallback",
+]
+
