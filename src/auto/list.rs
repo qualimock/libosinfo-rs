@@ -78,33 +78,33 @@ pub trait ListExt: IsA<List> + 'static {
         }
     }
 
-    /// Computes the intersection between `sourceOne` and `sourceTwo` and
+    /// Computes the intersection between `source_one` and `source_two` and
     /// adds the resulting list of entities to the `self`. Using one
     /// of the constructors in a subclass is preferable
     /// to this method.
-    /// ## `sourceOne`
+    /// ## `source_one`
     /// the first list to add
-    /// ## `sourceTwo`
+    /// ## `source_two`
     /// the second list to add
     #[doc(alias = "osinfo_list_add_intersection")]
-    fn add_intersection(&self, sourceOne: &impl IsA<List>, sourceTwo: &impl IsA<List>) {
+    fn add_intersection(&self, source_one: &impl IsA<List>, source_two: &impl IsA<List>) {
         unsafe {
-            ffi::osinfo_list_add_intersection(self.as_ref().to_glib_none().0, sourceOne.as_ref().to_glib_none().0, sourceTwo.as_ref().to_glib_none().0);
+            ffi::osinfo_list_add_intersection(self.as_ref().to_glib_none().0, source_one.as_ref().to_glib_none().0, source_two.as_ref().to_glib_none().0);
         }
     }
 
-    /// Computes the union between `sourceOne` and `sourceTwo` and
+    /// Computes the union between `source_one` and `source_two` and
     /// adds the resulting list of entities to the `self`. Using one
     /// of the constructors in a subclass is preferable
     /// to this method.
-    /// ## `sourceOne`
+    /// ## `source_one`
     /// the first list to add
-    /// ## `sourceTwo`
+    /// ## `source_two`
     /// the second list to add
     #[doc(alias = "osinfo_list_add_union")]
-    fn add_union(&self, sourceOne: &impl IsA<List>, sourceTwo: &impl IsA<List>) {
+    fn add_union(&self, source_one: &impl IsA<List>, source_two: &impl IsA<List>) {
         unsafe {
-            ffi::osinfo_list_add_union(self.as_ref().to_glib_none().0, sourceOne.as_ref().to_glib_none().0, sourceTwo.as_ref().to_glib_none().0);
+            ffi::osinfo_list_add_union(self.as_ref().to_glib_none().0, source_one.as_ref().to_glib_none().0, source_two.as_ref().to_glib_none().0);
         }
     }
 
@@ -207,8 +207,8 @@ pub trait ListExt: IsA<List> + 'static {
     }
 
     /// Construct a new list that is filled with only the elements
-    /// that are present in both `self` and `sourceTwo`.
-    /// ## `sourceTwo`
+    /// that are present in both `self` and `source_two`.
+    /// ## `source_two`
     /// the second list to copy
     ///
     /// # Returns
@@ -216,16 +216,16 @@ pub trait ListExt: IsA<List> + 'static {
     /// an intersection of the two lists
     #[doc(alias = "osinfo_list_new_intersection")]
 #[must_use]
-    fn new_intersection(&self, sourceTwo: &impl IsA<List>) -> Option<List> {
+    fn new_intersection(&self, source_two: &impl IsA<List>) -> Option<List> {
         unsafe {
-            from_glib_full(ffi::osinfo_list_new_intersection(self.as_ref().to_glib_none().0, sourceTwo.as_ref().to_glib_none().0))
+            from_glib_full(ffi::osinfo_list_new_intersection(self.as_ref().to_glib_none().0, source_two.as_ref().to_glib_none().0))
         }
     }
 
     /// Construct a new list that is filled with all the that are present in
-    /// either `self` and `sourceTwo`. `self` and `sourceTwo` must be of
+    /// either `self` and `source_two`. `self` and `source_two` must be of
     /// the same type.
-    /// ## `sourceTwo`
+    /// ## `source_two`
     /// the second list to copy
     ///
     /// # Returns
@@ -233,9 +233,9 @@ pub trait ListExt: IsA<List> + 'static {
     /// a union of the two lists
     #[doc(alias = "osinfo_list_new_union")]
 #[must_use]
-    fn new_union(&self, sourceTwo: &impl IsA<List>) -> Option<List> {
+    fn new_union(&self, source_two: &impl IsA<List>) -> Option<List> {
         unsafe {
-            from_glib_full(ffi::osinfo_list_new_union(self.as_ref().to_glib_none().0, sourceTwo.as_ref().to_glib_none().0))
+            from_glib_full(ffi::osinfo_list_new_union(self.as_ref().to_glib_none().0, source_two.as_ref().to_glib_none().0))
         }
     }
 }

@@ -50,29 +50,29 @@ impl Default for Filter {
 /// [`DeviceLinkFilter`][struct@crate::DeviceLinkFilter], [`Filter`][struct@crate::Filter], [`ProductFilter`][struct@crate::ProductFilter]
 pub trait FilterExt: IsA<Filter> + 'static {
     /// Adds a constraint that requires the entity to have
-    /// a property key `propName` with a value of `propVal`.
+    /// a property key `prop_name` with a value of `prop_val`.
     /// If multiple constraints are added for the same
-    /// `propName`, with different values, the entity have
+    /// `prop_name`, with different values, the entity have
     /// all property values.
-    /// ## `propName`
+    /// ## `prop_name`
     /// the name of the parameter key
-    /// ## `propVal`
+    /// ## `prop_val`
     /// the required property value
     #[doc(alias = "osinfo_filter_add_constraint")]
-    fn add_constraint(&self, propName: &str, propVal: &str) {
+    fn add_constraint(&self, prop_name: &str, prop_val: &str) {
         unsafe {
-            ffi::osinfo_filter_add_constraint(self.as_ref().to_glib_none().0, propName.to_glib_none().0, propVal.to_glib_none().0);
+            ffi::osinfo_filter_add_constraint(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0, prop_val.to_glib_none().0);
         }
     }
 
     /// Remove all filter constraints for the matching property
     /// name.
-    /// ## `propName`
+    /// ## `prop_name`
     /// name of the key to remove constraints for
     #[doc(alias = "osinfo_filter_clear_constraint")]
-    fn clear_constraint(&self, propName: &str) {
+    fn clear_constraint(&self, prop_name: &str) {
         unsafe {
-            ffi::osinfo_filter_clear_constraint(self.as_ref().to_glib_none().0, propName.to_glib_none().0);
+            ffi::osinfo_filter_clear_constraint(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0);
         }
     }
 
@@ -98,7 +98,7 @@ pub trait FilterExt: IsA<Filter> + 'static {
     }
 
     /// Get a list values for filter constraints with the named key
-    /// ## `propName`
+    /// ## `prop_name`
     /// the name of the key
     ///
     /// # Returns
@@ -106,9 +106,9 @@ pub trait FilterExt: IsA<Filter> + 'static {
     /// List of constraint values
     #[doc(alias = "osinfo_filter_get_constraint_values")]
     #[doc(alias = "get_constraint_values")]
-    fn constraint_values(&self, propName: &str) -> Vec<glib::GString> {
+    fn constraint_values(&self, prop_name: &str) -> Vec<glib::GString> {
         unsafe {
-            FromGlibPtrContainer::from_glib_container(ffi::osinfo_filter_get_constraint_values(self.as_ref().to_glib_none().0, propName.to_glib_none().0))
+            FromGlibPtrContainer::from_glib_container(ffi::osinfo_filter_get_constraint_values(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0))
         }
     }
 

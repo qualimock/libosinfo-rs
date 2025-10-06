@@ -432,61 +432,61 @@ pub trait DbExt: IsA<Db> + 'static {
 
     /// Get all unique values for a named property amongst all
     /// deployments in the database
-    /// ## `propName`
+    /// ## `prop_name`
     /// a property name
     ///
     /// # Returns
     ///
     /// a list of strings
     #[doc(alias = "osinfo_db_unique_values_for_property_in_deployment")]
-    fn unique_values_for_property_in_deployment(&self, propName: &str) -> Vec<glib::GString> {
+    fn unique_values_for_property_in_deployment(&self, prop_name: &str) -> Vec<glib::GString> {
         unsafe {
-            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_deployment(self.as_ref().to_glib_none().0, propName.to_glib_none().0))
+            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_deployment(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0))
         }
     }
 
     /// Get all unique values for a named property amongst all
     /// devices in the database
-    /// ## `propName`
+    /// ## `prop_name`
     /// a property name
     ///
     /// # Returns
     ///
     /// a list of strings
     #[doc(alias = "osinfo_db_unique_values_for_property_in_device")]
-    fn unique_values_for_property_in_device(&self, propName: &str) -> Vec<glib::GString> {
+    fn unique_values_for_property_in_device(&self, prop_name: &str) -> Vec<glib::GString> {
         unsafe {
-            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_device(self.as_ref().to_glib_none().0, propName.to_glib_none().0))
+            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_device(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0))
         }
     }
 
     /// Get all unique values for a named property amongst all
     /// operating systems in the database
-    /// ## `propName`
+    /// ## `prop_name`
     /// a property name
     ///
     /// # Returns
     ///
     /// a list of strings
     #[doc(alias = "osinfo_db_unique_values_for_property_in_os")]
-    fn unique_values_for_property_in_os(&self, propName: &str) -> Vec<glib::GString> {
+    fn unique_values_for_property_in_os(&self, prop_name: &str) -> Vec<glib::GString> {
         unsafe {
-            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_os(self.as_ref().to_glib_none().0, propName.to_glib_none().0))
+            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_os(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0))
         }
     }
 
     /// Get all unique values for a named property amongst all
     /// platforms in the database
-    /// ## `propName`
+    /// ## `prop_name`
     /// a property name
     ///
     /// # Returns
     ///
     /// a list of strings
     #[doc(alias = "osinfo_db_unique_values_for_property_in_platform")]
-    fn unique_values_for_property_in_platform(&self, propName: &str) -> Vec<glib::GString> {
+    fn unique_values_for_property_in_platform(&self, prop_name: &str) -> Vec<glib::GString> {
         unsafe {
-            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_platform(self.as_ref().to_glib_none().0, propName.to_glib_none().0))
+            FromGlibPtrContainer::from_glib_container(ffi::osinfo_db_unique_values_for_property_in_platform(self.as_ref().to_glib_none().0, prop_name.to_glib_none().0))
         }
     }
 }

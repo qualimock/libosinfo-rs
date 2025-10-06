@@ -85,17 +85,17 @@ impl InstallScript {
     /// a unique identifier
     /// ## `profile`
     /// the profile of script
-    /// ## `templateData`
+    /// ## `template_data`
     /// style sheet data
     ///
     /// # Returns
     ///
     /// an new install script
     #[doc(alias = "osinfo_install_script_new_data")]
-    pub fn new_data(id: &str, profile: &str, templateData: &str) -> InstallScript {
+    pub fn new_data(id: &str, profile: &str, template_data: &str) -> InstallScript {
         assert_initialized_main_thread!();
         unsafe {
-            from_glib_full(ffi::osinfo_install_script_new_data(id.to_glib_none().0, profile.to_glib_none().0, templateData.to_glib_none().0))
+            from_glib_full(ffi::osinfo_install_script_new_data(id.to_glib_none().0, profile.to_glib_none().0, template_data.to_glib_none().0))
         }
     }
 
@@ -104,17 +104,17 @@ impl InstallScript {
     /// a unique identifier
     /// ## `profile`
     /// the profile of script
-    /// ## `templateUri`
+    /// ## `template_uri`
     /// style sheet URI
     ///
     /// # Returns
     ///
     /// an new install script
     #[doc(alias = "osinfo_install_script_new_uri")]
-    pub fn new_uri(id: &str, profile: &str, templateUri: &str) -> InstallScript {
+    pub fn new_uri(id: &str, profile: &str, template_uri: &str) -> InstallScript {
         assert_initialized_main_thread!();
         unsafe {
-            from_glib_full(ffi::osinfo_install_script_new_uri(id.to_glib_none().0, profile.to_glib_none().0, templateUri.to_glib_none().0))
+            from_glib_full(ffi::osinfo_install_script_new_uri(id.to_glib_none().0, profile.to_glib_none().0, template_uri.to_glib_none().0))
         }
     }
 
