@@ -1,6 +1,6 @@
 [package]
 name = "libosinfo"
-version = "0.1.0"
+version = "0.1.1"
 authors = [ "Alexey Volkov <qualimock@altlinux.org>" ]
 edition = "2024"
 description = "Rust bindings for libosinfo"
