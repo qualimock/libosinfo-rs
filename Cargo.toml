@@ -1,5 +1,5 @@
 [package]
-name = "libosinfo-rs"
+name = "libosinfo"
 version = "0.1.0"
 authors = [ "Alexey Volkov <qualimock@altlinux.org>" ]
 edition = "2024"
